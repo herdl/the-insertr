@@ -8,3 +8,9 @@
  * Version: 1.0.0
  * Author URI: https://herdl.com
  */
+
+if (!defined('WPINC')) {
+    die('No direct access allowed');
+}
+
+
