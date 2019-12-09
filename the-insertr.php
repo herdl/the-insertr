@@ -13,4 +13,8 @@ if (!defined('WPINC')) {
     die('No direct access allowed');
 }
 
+function insertr_function() {
+    echo "Woohoo... it's working!";
+}
 
+add_shortcode('insertr', 'insertr_function');
