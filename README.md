@@ -21,6 +21,18 @@ You can download the latest release as a `.zip` then head over to your site to i
 
 Once this plugin has been approved on the Wordpress marketplace we will update the repository with a link. 
 
+## Usage
+
+To use this plugin you'll need to implement short codes in your Wordpress editor like so:
+```
+The [insertr key="keyword" fallback="person"] went for a run. 
+```
+
+Then you can use a link to this page as
+```
+herdl.com/run/?keyword=Cheetah
+```
+
 ## We're Using
 * [PHP](https://www.php.net/) - The primary programming language
 
