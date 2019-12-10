@@ -1,8 +1,9 @@
 ![The Insertr](.github/README/logo.png)
 
-[![HitCount](http://hits.dwyl.io/b3none/the-insertr.svg)](https://github.com/herdl/the-insertr)
+[![Contributors](https://img.shields.io/github/contributors/herdl/the-insertr)](https://github.com/herdl/the-insertr)
+[![HitCount](http://hits.dwyl.io/herdl/the-insertr.svg)](https://github.com/herdl/the-insertr)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/herdl/the-insertr/graphs/commit-activity)
-[![GitHub releases](https://img.shields.io/github/release/b3none/the-insertr.svg)](https://github.com/herdl/the-insertr/releases/)
+[![GitHub releases](https://img.shields.io/github/release/herdl/the-insertr.svg)](https://github.com/herdl/the-insertr/releases/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![We Love Open Source!](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/herdl)
 
