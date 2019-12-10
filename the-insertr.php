@@ -13,7 +13,7 @@ if (!defined('WPINC')) {
     die('No direct access allowed');
 }
 
-function insertr_function($attributes) {
+function insertr_function($attributes): string {
     $attributes = shortcode_atts([
         'key' => '',
         'fallback' => ''

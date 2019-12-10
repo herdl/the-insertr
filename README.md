@@ -13,7 +13,7 @@ Wordpress dynamic keyword insertion plugin.
 ## Prerequisites
 The following is a list of prerequisites for The Insertr.
 ```
-PHP Version >= 7.1.0
+PHP Version >= 7.0.0
 ```
 
 ### Installation
