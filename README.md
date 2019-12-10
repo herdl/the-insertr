@@ -1,6 +1,6 @@
 ![The Insertr](.github/README/logo.png)
 
-[![HitCount](http://hits.dwyl.io/b3none/the-insertr.svg)](http://hits.dwyl.io/herdl/the-insertr)
+[![HitCount](http://hits.dwyl.io/b3none/the-insertr.svg)](https://github.com/herdl/the-insertr)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/herdl/the-insertr/graphs/commit-activity)
 [![GitHub releases](https://img.shields.io/github/release/b3none/the-insertr.svg)](https://github.com/herdl/the-insertr/releases/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
