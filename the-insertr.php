@@ -23,12 +23,12 @@ function insertr_function($attributes): string {
     $adword = '';
 
     if (isset($_GET[$key])) {
-        $adword = urldecode($_GET[$key]) ;
+        $adword = urldecode($_GET[$key]);
     } else if ($attributes['fallback']) {
         $adword = $attributes['fallback'];
     }
 
-    return htmlentities($adword);
+    return esc_html($adword);
 }
 
 add_shortcode('insertr', 'insertr_function');
