@@ -23,7 +23,7 @@ function insertr_function(array $attributes): string {
     $adword = '';
 
     if (isset($_GET[$key])) {
-        $adword = urldecode($_GET[$key]);
+        $adword = urldecode(wp_strip_all_tags($_GET[$key]));
     } else if ($attributes['fallback']) {
         $adword = $attributes['fallback'];
     }
