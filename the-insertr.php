@@ -13,6 +13,34 @@ if (!defined('WPINC')) {
     die('No direct access allowed');
 }
 
+function theinsertr_register_settings() {
+    add_submenu_page('options-general.php', 'TheInsertr', 'TheInsertr', 'manage_options', 'theinsertr', 'theinsertr_settings');
+}
+
+function theinsertr_settings() {
+    $user = wp_get_current_user();
+
+    if (!current_user_can('administrator')) {
+        echo '<p>You are not allowed to access this page.</p>';
+        print_r($user->roles);
+        return;
+    }
+
+    if (isset($_REQUEST['submit'])) {
+        if (!isset($_REQUEST['theinsertr_nonce'])) {
+            $errorMessage = 'nonce field is missing. Settings NOT saved.';
+        } elseif (!wp_verify_nonce($_REQUEST['theinsertr_nonce'], 'theinsertr')) {
+            $errorMessage = 'Invalid nonce specified. Settings NOT saved.';
+        } else {
+            update_option('theinsertr_acf_enable', wp_strip_all_tags($_REQUEST['theinsertr_acf_enable']));
+            update_option('theinsertr_yoast_title_enable', wp_strip_all_tags($_REQUEST['theinsertr_yoast_title_enable']));
+            $message = 'Settings Saved.';
+        }
+    }
+
+    include_once(__DIR__ . '/templates/settings.php');
+}
+
 /**
  * If ACF is enabled add a listener to allow short codes
  */
@@ -57,4 +85,6 @@ function insertr_function(array $attributes): string {
     return esc_html($adword);
 }
 
+add_action('admin_menu', 'theinsertr_register_settings');
+add_action('wp_footer', 'theinsertr_render_script');
 add_shortcode('insertr', 'insertr_function');
