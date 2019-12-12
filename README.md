@@ -20,7 +20,7 @@ PHP Version >= 7.0.0
 
 You can download the latest release as a `.zip` then head over to your site to install this manually.
 
-Once this plugin has been approved on the Wordpress marketplace we will update the repository with a link. 
+Alternatively you can install it via the [Wordpress marketplace](https://wordpress.org/plugins/the-insertr/).
 
 ## Usage
 
