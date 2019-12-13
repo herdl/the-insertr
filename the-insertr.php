@@ -41,10 +41,7 @@ function theinsertr_settings() {
     include_once(__DIR__ . '/templates/settings.php');
 }
 
-/**
- * If ACF is enabled add a listener to allow short codes
- */
-if (!class_exists('ACF') && get_option('theinsertr_acf_enable') === 'yes') {
+if (get_option('theinsertr_acf_enable') === 'yes') {
     add_filter('acf/format_value', 'my_acf_format_value');
 
     function my_acf_format_value($value, $post_id, $field) {
@@ -56,9 +53,6 @@ if (!class_exists('ACF') && get_option('theinsertr_acf_enable') === 'yes') {
     }
 }
 
-/**
- * If Yoast SEO is enabled make sure we can use short codes
- */
 if (get_option('theinsertr_yoast_title_enable') === 'yes') {
     add_filter('wpseo_title', 'my_wpseo_title');
 
