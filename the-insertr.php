@@ -35,10 +35,10 @@ function theinsertr_settings() {
             update_option('theinsertr_acf_enable', wp_strip_all_tags($_REQUEST['theinsertr_acf_enable']));
             update_option('theinsertr_yoast_title_enable', wp_strip_all_tags($_REQUEST['theinsertr_yoast_title_enable']));
 
-            echo get_option('theinsertr_acf_enable') . '<br />';
-            echo get_option('theinsertr_yoast_title_enable');
+            $message = get_option('theinsertr_acf_enable') . '<br />';
+            $message .= get_option('theinsertr_yoast_title_enable') . '<br />';
 
-            $message = 'Settings Saved.';
+            $message .= 'Settings Saved.';
         }
     }
 
