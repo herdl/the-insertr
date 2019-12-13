@@ -34,6 +34,10 @@ function theinsertr_settings() {
         } else {
             update_option('theinsertr_acf_enable', wp_strip_all_tags($_REQUEST['theinsertr_acf_enable']));
             update_option('theinsertr_yoast_title_enable', wp_strip_all_tags($_REQUEST['theinsertr_yoast_title_enable']));
+
+            echo get_option('theinsertr_acf_enable') . '<br />';
+            echo get_option('theinsertr_yoast_title_enable');
+
             $message = 'Settings Saved.';
         }
     }
@@ -44,7 +48,7 @@ function theinsertr_settings() {
 /**
  * If ACF is enabled add a listener to allow short codes
  */
-if (!class_exists('ACF')) {
+if (!class_exists('ACF') && get_option('theinsertr_acf_enable') === 'yes') {
     add_filter('acf/format_value', 'my_acf_format_value');
 
     function my_acf_format_value($value, $post_id, $field) {
@@ -59,7 +63,7 @@ if (!class_exists('ACF')) {
 /**
  * If Yoast SEO is enabled make sure we can use short codes
  */
-if (is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active('wordpress-seo-premium/wp-seo-premium.php')) {
+if ((is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active('wordpress-seo-premium/wp-seo-premium.php')) && get_option('theinsertr_yoast_title_enable') === 'yes') {
     add_filter('wpseo_title', 'my_wpseo_title');
 
     function my_wpseo_title($title) {
