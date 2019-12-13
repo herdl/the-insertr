@@ -22,17 +22,24 @@ You can download the latest release as a `.zip` then head over to your site to i
 
 Alternatively you can install it via the [Wordpress marketplace](https://wordpress.org/plugins/the-insertr/).
 
+## Description
+
+The Herdl dynamic keyword insertion plugin, The Insertr, dynamically inserts a keyword onto your page using a simple URL query string to determine the keyword and a shortcode for placement.
+
+The placement of the word or phrase is determined by the location of the short code. In the case where a word is not specified a fallback Keyword or phrase is placed instead.
+
 ## Usage
 
-To use this plugin you'll need to implement short codes in your Wordpress editor like so:
-```
-The [insertr key="keyword" fallback="person"] went for a run. 
-```
+Short code to be used: [insertr key=”{desiredword}” fallback=”{fallback}”] where ‘desiredword’ is the word to be placed, and ‘fallback’ is the word to appear if no keyword is specified.
 
-Then you can use a link to this page as
-```
-herdl.com/run/?keyword=Cheetah
-```
+For the Keyword to be placed on your page, you must also add the following parameter to your URL: ?keyword={example} Where ‘example’ is the word you want to placed.
+
+If your URL already has parameters (E.g – there is already a ? in the URL) add &keyword={keyword} to the end of the string.
+
+## Use Cases
+– Improving the landing page experience for Google Ads performance by improving keyword relevancy
+– Personalisation of pages
+– Marketing automation
 
 ## We're Using
 * [PHP](https://www.php.net/) - The primary programming language
