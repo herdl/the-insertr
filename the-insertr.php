@@ -22,7 +22,6 @@ function theinsertr_settings() {
 
     if (!current_user_can('administrator')) {
         echo '<p>You are not allowed to access this page.</p>';
-        print_r($user->roles);
         return;
     }
 
