@@ -32,21 +32,10 @@ function theinsertr_settings() {
         } elseif (!wp_verify_nonce($_REQUEST['theinsertr_nonce'], 'theinsertr')) {
             $errorMessage = 'Invalid nonce specified. Settings NOT saved.';
         } else {
-            update_option('theinsertr_acf_enable', wp_strip_all_tags($_REQUEST['theinsertr_acf_enable']));
-            update_option('theinsertr_yoast_title_enable', wp_strip_all_tags($_REQUEST['theinsertr_yoast_title_enable']));
+            update_option('theinsertr_acf_enable', isset($_REQUEST['theinsertr_acf_enable']) ? 'yes' : 'no');
+            update_option('theinsertr_yoast_title_enable', isset($_REQUEST['theinsertr_yoast_title_enable']) ? 'yes' : 'no');
 
-            echo 'post <br>';
-            print_r($_POST);
-
-            echo 'request <br>';
-            print_r($_REQUEST);
-
-            $message = get_option('theinsertr_acf_enable') . '<br />';
-            $message .= $_REQUEST['theinsertr_acf_enable'] . '<br />';
-            $message .= get_option('theinsertr_yoast_title_enable') . '<br />';
-            $message .= $_REQUEST['theinsertr_yoast_title_enable'] . '<br />';
-
-            $message .= 'Settings Saved.';
+            $message = 'Settings Saved.';
         }
     }
 
