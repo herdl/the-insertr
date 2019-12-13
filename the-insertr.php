@@ -18,10 +18,8 @@ function theinsertr_register_settings() {
 }
 
 function theinsertr_settings() {
-    $user = wp_get_current_user();
-
     if (!current_user_can('administrator')) {
-        echo '<p>You are not allowed to access this page.</p>';
+        echo '<p>Sorry, you are not allowed to access this page.</p>';
         return;
     }
 
