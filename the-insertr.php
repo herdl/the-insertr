@@ -63,7 +63,7 @@ if (!class_exists('ACF') && get_option('theinsertr_acf_enable') === 'yes') {
 /**
  * If Yoast SEO is enabled make sure we can use short codes
  */
-if ((is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active('wordpress-seo-premium/wp-seo-premium.php')) && get_option('theinsertr_yoast_title_enable') === 'yes') {
+if (get_option('theinsertr_yoast_title_enable') === 'yes') {
     add_filter('wpseo_title', 'my_wpseo_title');
 
     function my_wpseo_title($title) {
