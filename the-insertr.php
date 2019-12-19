@@ -5,7 +5,7 @@
  * Plugin URI: https://github.com/herdl/the-insertr
  * Description: Wordpress dynamic keyword insertion plugin.
  * Author: Herdl
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author URI: https://herdl.com
  */
 
