@@ -40,7 +40,7 @@ You can also specify the fallback case by doing the following
 
 `[insertr key=”{desiredword}” fallback=”{fallback}” case="upper"]`
 
-There are 3 case options `upper`, `lower` and `title`.
+There are 3 case options `upper`, `lower` and `title`. The default value for this is `lower`.
 
 ## Use Cases
 – Improving the landing page experience for Google Ads performance by improving keyword relevancy
