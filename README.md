@@ -30,11 +30,17 @@ The placement of the word or phrase is determined by the location of the short c
 
 ## Usage
 
-Short code to be used: [insertr key=”{desiredword}” fallback=”{fallback}”] where ‘desiredword’ is the word to be placed, and ‘fallback’ is the word to appear if no keyword is specified.
+Short code to be used: `[insertr key=”{desiredword}” fallback=”{fallback}”]` where ‘desiredword’ is the word to be placed, and ‘fallback’ is the word to appear if no keyword is specified.
 
 For the Keyword to be placed on your page, you must also add the following parameter to your URL: ?keyword={example} Where ‘example’ is the word you want to placed.
 
 If your URL already has parameters (E.g – there is already a ? in the URL) add &keyword={keyword} to the end of the string.
+
+You can also specify the fallback case by doing the following
+
+`[insertr key=”{desiredword}” fallback=”{fallback}” case="upper"]`
+
+There are 3 case options `upper`, `lower` and `title`.
 
 ## Use Cases
 – Improving the landing page experience for Google Ads performance by improving keyword relevancy
