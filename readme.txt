@@ -1,7 +1,7 @@
 === The Insertr ===
 Contributors: b3none, garethmorgans
 Donate link: https://herdl.com/
-Tags: keyword, dynamic insertion, ads, ad manager, google ads, keyword insertion, DKI, PPC, SEO
+Tags: keyword, dynamic keyword insertion, dynamic insertion, ads, ad manager, google ads, keyword insertion, DKI, PPC, SEO
 Requires at least: 2.9
 Tested up to: 5.7
 Stable tag: 5.7
