@@ -49,7 +49,7 @@ When this URL is used to visit our landing page, all instances of the shortcode 
 
 For reference, “%20” is the URL encoded value for a space.
 
-== Usage ==
+== Advanced Usage ==
 
 You can use multiple shortcodes on the page to dynamically insert different words and phrases. This will require you to use multiple query parameters that are separated by an ampersand, "&", as shown below.
 
