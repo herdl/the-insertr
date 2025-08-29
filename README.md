@@ -1,65 +1,51 @@
-![The Insertr](.github/README/logo.png)
-
-[![Contributors](https://img.shields.io/github/contributors/herdl/the-insertr)](https://github.com/herdl/the-insertr)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/herdl/the-insertr/graphs/commit-activity)
-[![GitHub releases](https://img.shields.io/github/release/herdl/the-insertr.svg)](https://github.com/herdl/the-insertr/releases/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![We Love Open Source!](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/herdl)
-
 # The Insertr
-Wordpress dynamic keyword insertion plugin.
+
+WordPress dynamic keyword insertion plugin.
 
 ## Prerequisites
-The following is a list of prerequisites for The Insertr.
-```
-PHP Version >= 7.0.0
-```
 
-### Installation
+- **PHP Version**: >= 8.2.0
+- **WordPress Version**: >= 5.0
 
-You can download the latest release as a `.zip` then head over to your site to install this manually.
+## Installation
 
-Alternatively you can install it via the [Wordpress marketplace](https://wordpress.org/plugins/the-insertr/).
+1. Download the latest release as a `.zip` file.
+2. Go to your WordPress admin panel and navigate to Plugins > Add New.
+3. Click on 'Upload Plugin' and choose the downloaded `.zip` file.
+4. Click 'Install Now' and then 'Activate' the plugin.
 
 ## Description
 
-The Herdl dynamic keyword insertion plugin, The Insertr, dynamically inserts a keyword onto your page using a simple URL query string to determine the keyword and a shortcode for placement.
-
-The placement of the word or phrase is determined by the location of the short code. In the case where a word is not specified a fallback Keyword or phrase is placed instead.
+The Insertr allows marketers and site owners to dynamically insert words and phrases into landing pages. Control your parameters using a shortcode and simple query string in the page URL. A fallback can be entered for cases where the URL does not contain the expected query string. Options are available for uppercase, lowercase, and title case text.
 
 ## Usage
 
-Short code to be used: `[insertr key=”{desiredword}” fallback=”{fallback}”]` where ‘desiredword’ is the word to be placed, and ‘fallback’ is the word to appear if no keyword is specified.
+To use the plugin, add the following shortcode where you wish to insert a dynamic word or phrase:
 
-For the Keyword to be placed on your page, you must also add the following parameter to your URL: ?keyword={example} Where ‘example’ is the word you want to placed.
+`[insertr key="{urlParameter}" fallback="{fallbackWord}"]`
 
-If your URL already has parameters (E.g – there is already a ? in the URL) add &keyword={keyword} to the end of the string.
+- **key**: The URL parameter you'd like to use.
+- **fallback**: The fallback word to be displayed if the URL does not contain a query string using the URL parameter you've defined.
 
-You can also specify the fallback case by doing the following
+### Advanced Usage
 
-`[insertr key=”{desiredword}” fallback=”{fallback}” case="upper"]`
+You can specify the case of the inserted word using the `case` attribute. Options are `upper`, `lower`, and `title`. For example:
 
-There are 3 case options `upper`, `lower` and `title`. The default value for this is `lower`.
+- `[insertr key="keyword" fallback="PPC Agency" case="upper"]` will display the word in uppercase.
+- `[insertr key="keyword" fallback="PPC Agency" case="lower"]` will display the word in lowercase.
+- `[insertr key="keyword" fallback="PPC Agency" case="title"]` will display the word in title case.
 
-## Use Cases
-– Improving the landing page experience for Google Ads performance by improving keyword relevancy
-– Personalisation of pages
-– Marketing automation
+## Support
 
-## We're Using
-* [PHP](https://www.php.net/) - The primary programming language
-
-## Contributing
-It is worth noting that all contributions must comply with the [PSR-2 standards](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-
-## Versioning
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/herdl/the-insertr/tags). 
-
-## Authors
-* **Alex Blackham** - *Developer and Maintainer* - [B3none](https://github.com/b3none)
-* **Mat Moses** - *Logo creation* - [mooonthemove](https://instagram.com/mooonthemove)
-
-See also the list of [contributors](https://github.com/herdl/the-insertr/contributors) who participated in this project.
+For support, please visit the [support forum](https://wordpress.org/support/plugin/the-insertr) or contact us at [support@herdl.com](mailto:support@herdl.com).
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Contributors
+
+- **Alex Blackham** - *Developer and Maintainer* - [B3none](https://github.com/b3none)
+- **Mat Moses** - *Logo creation* - [mooonthemove](https://instagram.com/mooonthemove)
+
+See also the list of [contributors](https://github.com/herdl/the-insertr/contributors) who participated in this project.
