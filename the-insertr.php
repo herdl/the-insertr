@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/herdl/the-insertr
  * Description: Wordpress dynamic keyword insertion plugin.
  * Author: Herdl
- * Version: 1.5.0
+ * Version: 1.5.1
  * Author URI: https://herdl.com
  */
 
@@ -74,54 +74,57 @@ function apply_case(string $adword, string $case): string {
   }
 }
 
-/**
- * Use nonces for form submissions and AJAX requests
-**/
-function insertr_nonce_field() {
-  wp_nonce_field('insertr_nonce_action', 'insertr_nonce');
-}
-add_action('admin_init', 'insertr_nonce_field');
-
 add_shortcode('insertr', 'insertr_function');
 
 /**
- * Ensure compatibility with ACF
+ * Ensure compatibility with ACF (Free and Pro)
 **/
-if (!has_filter('acf/load_value/type=shortcode', 'do_shortcode')) {
+if (is_plugin_active('advanced-custom-fields/acf.php') || is_plugin_active('advanced-custom-fields-pro/acf.php')) {
+  if (!has_filter('acf/load_value/type=shortcode', 'do_shortcode')) {
     add_filter('acf/load_value/type=shortcode', 'do_shortcode');
+  }
 }
 
 /**
- * Ensure shortcodes can be used in SEO plugins
+ * Ensure shortcodes can be used in SEO plugins (Free and Pro)
 **/
-if (!has_filter('wpseo_title', 'do_shortcode')) {
+
+// Yoast SEO
+if (is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active('wordpress-seo-premium/wp-seo-premium.php')) {
+  if (!has_filter('wpseo_title', 'do_shortcode')) {
     add_filter('wpseo_title', 'do_shortcode');
-}
-
-if (!has_filter('wpseo_metadesc', 'do_shortcode')) {
+  }
+  if (!has_filter('wpseo_metadesc', 'do_shortcode')) {
     add_filter('wpseo_metadesc', 'do_shortcode');
+  }
 }
 
-if (!has_filter('rank_math/frontend/title', 'do_shortcode')) {
+// Rank Math
+if (is_plugin_active('seo-by-rank-math/rank-math.php') || is_plugin_active('seo-by-rank-math-pro/rank-math-pro.php')) {
+  if (!has_filter('rank_math/frontend/title', 'do_shortcode')) {
     add_filter('rank_math/frontend/title', 'do_shortcode');
-}
-
-if (!has_filter('rank_math/frontend/description', 'do_shortcode')) {
+  }
+  if (!has_filter('rank_math/frontend/description', 'do_shortcode')) {
     add_filter('rank_math/frontend/description', 'do_shortcode');
+  }
 }
 
-if (!has_filter('aioseo_title', 'do_shortcode')) {
+// AIOSEO 
+if (is_plugin_active('all-in-one-seo-pack/all_in_one_seo_pack.php') || is_plugin_active('all-in-one-seo-pack-pro/all_in_one_seo_pack_pro.php')) {
+  if (!has_filter('aioseo_title', 'do_shortcode')) {
     add_filter('aioseo_title', 'do_shortcode');
-}
-
-if (!has_filter('aioseo_description', 'do_shortcode')) {
+  }
+  if (!has_filter('aioseo_description', 'do_shortcode')) {
     add_filter('aioseo_description', 'do_shortcode');
+  }
 }
 
-if (!has_filter('seopress_titles_title', 'do_shortcode')) {
+// SEOPress
+if (is_plugin_active('wp-seopress/seopress.php') || is_plugin_active('wp-seopress-pro/seopress-pro.php')) {
+  if (!has_filter('seopress_titles_title', 'do_shortcode')) {
     add_filter('seopress_titles_title', 'do_shortcode');
-}
-
-if (!has_filter('seopress_titles_desc', 'do_shortcode')) {
+  }
+  if (!has_filter('seopress_titles_desc', 'do_shortcode')) {
     add_filter('seopress_titles_desc', 'do_shortcode');
+  }
 }

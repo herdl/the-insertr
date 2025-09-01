@@ -28,10 +28,26 @@ A fallback can be entered for cases where the URL does not contain the expected 
 
 To use the plugin, add the following shortcode where you wish to insert a dynamic word or phrase:
 
-[insertr key="{urlParameter}" fallback="{fallbackWord}"]
+[insertr key="urlParameter" fallback="fallbackWord"]
 
-In the shortcode, the "key" option contains the URL parameter you'd like to use, and the "fallback" option contains the fallback word to be displayed if the URL does not contain a query string using the URL parameter you've defined.
+In the shortcode, the "key" option contains the URL parameter you'd like to use.
+
+The "fallback" option contains the fallback word to be displayed if the URL does not contain a query string using the URL parameter you've defined.
+
+For example:
+
+We'll set the URL parameter to be "key" which we'll assign a value for in the URL. Our fallback word will be "PPC Agency" if the correct query string isn't used.
+
+[insertr key="Digital Agency" fallback="PPC Agency"]
+
+The link for the landing page will use a query string with the parameter set above, "key", and the value we'd like to use – in this case we want to dynamically insert "Digital Agency".
+
+example.com?key="digital%20agency"
+
+When this URL is used to visit the landing page, all instances of the shortcode will display "Digital Agency". If the query string is not used, all instances of the shortcode will display "PPC Agency".
+
+For reference, "%20" is the URL encoded value for a space.
 
 == Support ==
 
-For support, please visit the [support forum](https://wordpress.org/support/plugin/the-insertr) or contact us at [support@herdl.com](mailto:support@herdl.com).
+For support, please visit the [support forum](https://wordpress.org/support/plugin/the-insertr).

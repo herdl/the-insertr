@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1] - 2025-09-01
+### Changed
+- Ensured compatibility checks for both free and pro versions of ACF and SEO plugins.
+- Removed nonce implementation as it was not needed.
+- Updated plugin documentation.
+- Organized code for better readability and maintainability.
+
 ## [1.5.0] - 2025-08-29
 ### Added
 - Enhanced security by validating and sanitizing all user inputs.
