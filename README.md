@@ -5,7 +5,7 @@ WordPress dynamic keyword insertion plugin.
 ## Prerequisites
 
 - **PHP Version**: >= 8.2.0
-- **WordPress Version**: >= 5.0
+- **WordPress Version**: >= 6.3
 
 ## Installation
 
@@ -37,7 +37,7 @@ You can specify the case of the inserted word using the `case` attribute. Option
 
 ## Support
 
-For support, please visit the [support forum](https://wordpress.org/support/plugin/the-insertr) or contact us at [support@herdl.com](mailto:support@herdl.com).
+For support, please visit the [support forum](https://wordpress.org/support/plugin/the-insertr).
 
 ## License
 
