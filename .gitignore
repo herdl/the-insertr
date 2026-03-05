@@ -3,3 +3,6 @@
 .docs/
 
 tests/
+
+# WordPress.org SVN checkout (do not commit; see DEPLOY.md)
+the-insertr-svn/

@@ -3,8 +3,8 @@ Contributors: b3none, garethmorgans
 Donate link: https://herdl.com/
 Tags: keyword, dynamic keyword insertion, dynamic insertion, ads, ad manager, google ads, keyword insertion, DKI, PPC, SEO
 Requires at least: 6.3
-Tested up to: 6.8.2
-Stable tag: 6.8.2
+Tested up to: 6.9.1
+Stable tag: 1.6.0
 Requires PHP: 8.2.0
 License: MIT
 License URI: https://github.com/herdl/the-insertr/blob/master/LICENSE.md
@@ -96,8 +96,8 @@ This would display the inserted words in title case:
 There are currently no frequently asked questions for this project.
 
 == Upgrade Notice ==
-
-There are currently no upgrade notices for this project.
+= 1.6.0 =
+Gutenberg block, ACF compatibility, frontend fixes. Tested with WordPress 6.9.1.
 
  == Screenshots ==
 
@@ -109,6 +109,7 @@ There are currently no upgrade notices for this project.
 * Added: Frontend-safe plugin detection for ACF and SEO integrations.
 * Changed: Plugin now works correctly when used on the frontend (shortcode and block).
 * Compatibility: Shortcode and ACF support unchanged; block is additive for WordPress 5.0+.
+* Tested with WordPress 6.9.1.
 
 = 1.5.2 - 2025-09-22 =
 * Changed: Updated plugin docs

@@ -39,6 +39,19 @@ You can specify the case of the inserted word using the `case` attribute. Option
 - `[insertr key="keyword" fallback="PPC Agency" case="lower"]` will display the word in lowercase.
 - `[insertr key="keyword" fallback="PPC Agency" case="title"]` will display the word in title case.
 
+## Releasing to WordPress.org
+
+To publish a new version to the [WordPress.org plugin directory](https://en-gb.wordpress.org/plugins/the-insertr/):
+
+1. Update `readme.txt`: set **Stable tag** to the new version (e.g. `1.6.0`), **Tested up to**, and changelog.
+2. Checkout or update the plugin’s SVN repo: `svn co https://plugins.svn.wordpress.org/the-insertr the-insertr-svn` (or `svn up`).
+3. Copy the plugin files (the-insertr.php, readme.txt, build/, index.php, optionally LICENSE.md) into the SVN **trunk**.
+4. Run `svn add` for any new paths, `svn delete` for any removed paths.
+5. Create the release tag: `svn cp trunk tags/X.Y.Z` (e.g. `tags/1.6.0`).
+6. Commit: `svn commit -m "Release X.Y.Z: description"` and authenticate with your WordPress.org credentials when prompted.
+
+Full step-by-step instructions, prerequisites, and examples are in [DEPLOY.md](DEPLOY.md).
+
 ## Support
 
 For support, please visit the [support forum](https://wordpress.org/support/plugin/the-insertr).
