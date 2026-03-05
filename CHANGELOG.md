@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.6.0] - 2026-03-05
+### Added
+- Gutenberg (Insertr) block for the block editor with sidebar controls for key, fallback, and case.
+- Frontend-safe plugin detection for ACF and SEO integrations.
+
+### Changed
+- Plugin checks for ACF/SEO now work on the frontend (no reliance on admin-only `is_plugin_active()`).
+- Shortcode and ACF support unchanged; block is additive for WordPress 5.0+.
+
 ## [1.5.1] - 2025-09-01
 ### Changed
 - Ensured compatibility checks for both free and pro versions of ACF and SEO plugins.

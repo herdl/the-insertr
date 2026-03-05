@@ -17,6 +17,8 @@ The Insertr allows marketers and site owners to dynamically insert words and phr
 
 A fallback can be entered for cases where the URL does not contain the expected query string. Options are available for uppercase, lowercase and title case text.
 
+Works with the block editor (Gutenberg), classic editor, and ACF shortcode fields. Use the Insertr block in Gutenberg or the [insertr] shortcode anywhere shortcodes are processed.
+
 == Installation ==
 
 You can download the latest release as a `.zip` then head over to your site to install this manually.
@@ -25,7 +27,9 @@ Once this plugin has been approved on the WordPress marketplace we will update t
 
 == Usage ==
 
-Add the following shortcode where you wish to insert a dynamic word or phrase:
+**Block editor (Gutenberg):** Add the "Insertr" block from the block inserter (Text category). Set the URL parameter (key), fallback text, and case in the block sidebar.
+
+**Shortcode:** Add the following shortcode where you wish to insert a dynamic word or phrase (classic editor, Shortcode block, or ACF shortcode fields):
 
 [insertr key="{urlParameter}" fallback="{fallbackWord}"]
 
@@ -100,6 +104,12 @@ There are currently no upgrade notices for this project.
 1. There are no screenshots available for this project.
 
 == Changelog ==
+= 1.6.0 =
+* Added: Gutenberg (Insertr) block for the block editor.
+* Added: Frontend-safe plugin detection for ACF and SEO integrations.
+* Changed: Plugin now works correctly when used on the frontend (shortcode and block).
+* Compatibility: Shortcode and ACF support unchanged; block is additive for WordPress 5.0+.
+
 = 1.5.2 - 2025-09-22 =
 * Changed: Updated plugin docs
 

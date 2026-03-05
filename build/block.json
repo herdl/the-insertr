@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "herdl/insertr",
+  "version": "1.0.0",
+  "title": "Insertr",
+  "category": "text",
+  "description": "Dynamically insert a word or phrase from the URL query string, with a fallback.",
+  "keywords": [ "keyword", "dynamic", "insertion", "DKI", "PPC" ],
+  "textdomain": "the-insertr",
+  "attributes": {
+    "key": {
+      "type": "string",
+      "default": "keyword"
+    },
+    "fallback": {
+      "type": "string",
+      "default": ""
+    },
+    "case": {
+      "type": "string",
+      "default": "lower",
+      "enum": [ "upper", "lower", "title" ]
+    }
+  },
+  "example": {
+    "attributes": {
+      "key": "keyword",
+      "fallback": "PPC Agency",
+      "case": "lower"
+    }
+  },
+  "supports": {
+    "html": false
+  }
+}

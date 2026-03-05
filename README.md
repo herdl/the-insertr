@@ -18,9 +18,13 @@ WordPress dynamic keyword insertion plugin.
 
 The Insertr allows marketers and site owners to dynamically insert words and phrases into landing pages. Control your parameters using a shortcode and simple query string in the page URL. A fallback can be entered for cases where the URL does not contain the expected query string. Options are available for uppercase, lowercase, and title case text.
 
+Works with the block editor (Gutenberg), classic editor, and ACF shortcode fields. Use the **Insertr** block in Gutenberg or the `[insertr]` shortcode anywhere shortcodes are processed.
+
 ## Usage
 
-To use the plugin, add the following shortcode where you wish to insert a dynamic word or phrase:
+**Block editor (Gutenberg):** Add the "Insertr" block from the block inserter (Text category). Configure the URL parameter (key), fallback text, and case in the block sidebar.
+
+**Shortcode:** Add the following shortcode where you wish to insert a dynamic word or phrase (classic editor, Shortcode block, or ACF shortcode fields):
 
 `[insertr key="{urlParameter}" fallback="{fallbackWord}"]`
 
